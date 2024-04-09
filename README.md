@@ -14,7 +14,7 @@ The Python script `model_preprocessing.py` preprocesses the data using `sklearn.
 The Python script `model_preparation.py` creates and trains a Linear Regression model on the data prepared in the previous stage. [Find more details using the link](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression)
 
 ### 4. Model Testing (model_testing.py)
-The Python script `model_testing.py` evaluates the machine learning model on the data from the `test` folder. This stage allows assessing the model's performance on new data. `r2_score` has taken as a key metric. [Find more details using the link](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html#sklearn.metrics.r2_score)
+The Python script `model_testing.py` evaluates the machine learning model on the data from the `test` folder. This stage allows assessing the model's performance on new data. `r2_score` has been taken as a key metric. [Find more details using the link](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html#sklearn.metrics.r2_score)
 
 ## Running the Process:
 
