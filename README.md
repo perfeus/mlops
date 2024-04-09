@@ -26,3 +26,9 @@ To run the entire process automatically, you can use the bash script `pipeline.s
 
 In the example you'll get dataset with 1000 rows, linear model with polynomial degree equals 3, noise distributed normaly with stadard deviation 2 and number of anomalies in the dataset is 0. 
 
+## Environment Requirements:
+To successfully execute the process, you need Python and the libraries listed in the requirements.txt file installed. You can install them by running the following command:
+
+```bash
+pip install -r requirements.txt
+```
