@@ -1,3 +1,4 @@
 env/
-train/
-test/
+./lab1/train/
+./lab1/test/
+./lab1/model.pkl
