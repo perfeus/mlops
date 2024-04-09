@@ -9,4 +9,5 @@ model = joblib.load('./model.pkl')
 # load the test data
 data = np.genfromtxt('./test/data.csv', delimiter=',')
 # evaluate the model
-print(r2_score(data[:, 1], model.predict(data[:, 0].reshape(-1, 1))))
+r2 = r2_score(data[:, 1], model.predict(data[:, 0].reshape(-1, 1)))
+print(f'Model test R2 score is: {r2}')

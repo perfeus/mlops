@@ -22,7 +22,7 @@ To run the entire process automatically, you can use the bash script `pipeline.s
 
 ```bash
 ./pipeline.sh 1000 3 2 0
+```
 
-
-In the example 
+In the example you'll get dataset with 1000 rows, linear model with polynomial degree equals 3, noise distributed normaly with stadard deviation 2 and number of anomalies in the dataset is 0. 
 
