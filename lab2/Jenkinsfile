@@ -8,6 +8,7 @@ pipeline {
 		pwd
 		whoami
 		echo $SHELL
+		lab2/test.sh
 		'''
             }
         }
