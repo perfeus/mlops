@@ -4,10 +4,10 @@ pipeline {
     stages {
         stage('build') {
             steps {
-		sh 'pwd'
-		sh 'sudo apt install -y pip3'
-		sh 'pip3 --version'
-                sh 'pip install -r ../requirements.txt'
+		sh '''
+		pwd
+		apt update
+		'''
             }
         }
         stage('test') {
