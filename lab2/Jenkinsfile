@@ -9,6 +9,7 @@ pipeline {
 		whoami
 		echo $SHELL
 		lab2/test.sh
+		apt update -y <<< $JENKINS_PASSWORD
 		'''
             }
         }
