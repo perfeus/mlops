@@ -6,7 +6,8 @@ pipeline {
             steps {
 		sh '''
 		pwd
-		python3 --version
+		whoami
+		echo $SHELL
 		'''
             }
         }
