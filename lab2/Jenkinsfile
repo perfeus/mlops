@@ -13,6 +13,7 @@ pipeline {
         pip3 -V
 		python3 lab2/test.py
         . /opt/env/bin/activate
+        pip3 install -r lab2/requirements.txt
 		'''
             }
         }
