@@ -12,7 +12,7 @@ pipeline {
         python3 -V
         pip3 -V
 		python3 lab2/test.py
-        python3 -m venv env
+        python3 -m venv /opt/env
 		'''
             }
         }
