@@ -10,7 +10,10 @@ pipeline {
 		echo $SHELL
 		lab2/test.sh
         python3 -V
+        pip3 -V
 		python3 lab2/test.py
+        python3.10 -V
+        python3.10 lab2/test.py
 		'''
             }
         }
