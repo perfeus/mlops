@@ -12,8 +12,8 @@ pipeline {
         python3 -V
         pip3 -V
 		python3 lab2/test.py
-        python3.10 -V
-        python3.10 lab2/test.py
+        python3 -m venv env
+        source env/bin/activate
 		'''
             }
         }
