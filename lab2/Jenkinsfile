@@ -12,7 +12,7 @@ pipeline {
         python3 -V
         pip3 -V
 		python3 lab2/test.py
-        source lab2/test.sh
+        . /opt/env/bin/activate
 		'''
             }
         }
