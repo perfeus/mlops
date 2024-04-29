@@ -10,6 +10,7 @@ pipeline {
                 python3 -m venv $JENKINS_HOME/venv
                 . $JENKINS_HOME/venv/bin/activate
                 pip install -r lab2/requirements.txt
+                python3 lab2/data_creation.py
                 '''
             }
         }
