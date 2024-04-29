@@ -7,7 +7,7 @@ pipeline {
                 sh '''
                 pwd
                 which python3
-                env
+                python3 -m venv $JENKINS_HOME/venv
                 '''
             }
         }
