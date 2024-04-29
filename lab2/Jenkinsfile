@@ -7,13 +7,13 @@ pipeline {
                 sh '''
                 pwd
                 which python3
-                test.sh
+                lab2/test.sh
                 '''
             }
         }
         stage('Create Dataset') {
             steps {
-                sh 'python3 lab2/create_dataset.py'
+                sh 'python3 lab2/data_creation.py'
             }
         }
     }
