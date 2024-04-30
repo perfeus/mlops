@@ -2,7 +2,7 @@
 pipeline {
     agent any
     stages {
-        stage('Setup Environment') {
+        stage('Environment Info') {
             steps {
                 sh '''
                 pwd
@@ -13,6 +13,11 @@ pipeline {
         stage('Create Dataset') {
             steps {
                 sh 'python3 lab2/data_creation.py'
+            }
+        }
+        stage('Preprocess Dataset') {
+            steps {
+                sh 'python3 lab2/data_preprocessing.py'
             }
         }
     }
