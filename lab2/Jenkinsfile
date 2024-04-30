@@ -20,5 +20,10 @@ pipeline {
                 sh 'python3 lab2/model_preprocessing.py'
             }
         }
+        stage('Train Model') {
+            steps {
+                sh 'python3 lab2/model_preparation.py'
+            }
+        }
     }
 }
