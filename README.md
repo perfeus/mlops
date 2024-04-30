@@ -67,3 +67,6 @@ Configure the pipeline according to your project requirements, such as adjusting
 ### 4. Monitoring
 Trigger the pipeline execution, either manually or automatically based on configured triggers.
 Monitor the pipeline execution in the Jenkins dashboard to track progress and view logs.
+
+## Post-Build Actions:
+The pipeline includes a post-build action to echo "Pipeline has completed!" This step runs after each pipeline execution, providing feedback that the pipeline has finished.
