@@ -32,3 +32,38 @@ To successfully execute the process, you need Python and the libraries listed in
 ```bash
 pip install -r requirements.txt
 ```
+
+# Module 2
+
+This project aims to streamline the machine learning workflow using Jenkins pipelines. The pipeline automates the process of creating datasets, preprocessing data, training models, and testing models. The entire workflow is orchestrated using Jenkins, ensuring consistency and reproducibility across different stages of the machine learning pipeline.
+
+## Pipeline Stages:
+
+### 1. Environment Info
+Display information about the environment, including the current working directory and the location of the Python 3 interpreter.
+### 2. Create Dataset
+Execute the data_creation.py script to generate datasets required for training and testing models.
+### 3. Preprocess Dataset
+Run the model_preprocessing.py script to preprocess the generated datasets before training the model.
+### 4. Train Model
+Execute the model_preparation.py script to train machine learning models using the preprocessed datasets.
+### 5. Test Model
+Run the model_testing.py script to evaluate the performance of trained models on test datasets.
+
+## Usage:
+
+### 1. Build docker image
+To build a docker image use Dockerfile and run the command:
+```bash
+docker build -t myimage:v01 .
+```
+### 2. Run docker container
+To run docker container user the command:
+```bash
+docker run -d --name jenkins -p 88:8080 -p 50000:50000 myimage:v01
+```
+### 3. Configuration
+Configure the pipeline according to your project requirements, such as adjusting paths to scripts.
+### 4. Monitoring
+Trigger the pipeline execution, either manually or automatically based on configured triggers.
+Monitor the pipeline execution in the Jenkins dashboard to track progress and view logs.
