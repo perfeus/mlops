@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Preprocess Dataset') {
             steps {
-                sh 'python3 lab2/data_preprocessing.py'
+                sh 'python3 lab2/model_preprocessing.py'
             }
         }
     }
