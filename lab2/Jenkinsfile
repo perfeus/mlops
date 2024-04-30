@@ -31,4 +31,9 @@ pipeline {
             }
         }
     }
+    post('Always run') {
+        always {
+            sh 'echo Pipeline has completed!'
+        }
+    }
 }
