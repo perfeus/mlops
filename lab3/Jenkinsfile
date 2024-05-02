@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Create Dataset') {
             steps {
-                sh 'jupyter nbconvert --execute dataset.ipynb --to python'
+                sh 'jupyter nbconvert --execute lab3/dataset.ipynb --to python'
             }
         }
     }
