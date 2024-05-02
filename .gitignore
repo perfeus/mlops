@@ -1,7 +1,11 @@
 env/
+venv/
 lab1/train/
 lab1/test/
 lab1/model.pkl
 lab2/train/
 lab2/test/
 lab2/model.pkl
+lab3/model.pkl
+lab3/.ipynb_checkpoints
+lab3/__pycache__
