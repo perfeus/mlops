@@ -9,3 +9,4 @@ lab2/model.pkl
 lab3/model.pkl
 lab3/.ipynb_checkpoints
 lab3/__pycache__
+lab3/dataset.py
