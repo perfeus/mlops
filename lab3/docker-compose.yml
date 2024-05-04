@@ -1,0 +1,19 @@
+#docker run -d --rm --name app -p 5000:5000 sndbox44/titanic:latest
+#docker run -d --rm --name jen -p 88:8080 -p 50000:50000 sndbox44/jenkinspy:latest
+
+services:
+  web-server:
+    image: sndbox44/titanic:latest
+    container_name: app
+    ports:
+      - '5000:5000'
+    restart: unless-stopped
+  
+  continues-integration:
+    image: sndbox44/jenkinspy:latest
+    container_name: jen
+    ports:
+      - '88:8080'
+      - '50000:50000'
+    restart: unless-stopped
+
