@@ -70,3 +70,22 @@ Monitor the pipeline execution in the Jenkins dashboard to track progress and vi
 
 ## Post-Build Actions:
 The pipeline includes a post-build action to echo "Pipeline has completed!" This step runs after each pipeline execution, providing feedback that the pipeline has finished.
+
+# Module 3
+
+Web Server: This service, named web-server, is designed to run a web application using the image [sndbox44/titanic:latest](https://hub.docker.com/repository/docker/sndbox44/titanic/general) from Docker Hub. It exposes port 5000 on the host machine and forwards traffic to port 5000 within the container. The container is named 'app' and is configured to restart unless explicitly stopped.
+Continuous Integration: The continues-integration service is responsible for running Jenkins using the image [sndbox44/jenkinspy:latest](https://hub.docker.com/repository/docker/sndbox44/jenkinspy/general) from Docker Hub. It exposes ports 88 and 50000 on the host machine for accessing Jenkins' web interface and handling Jenkins agent communication, respectively. The container is named 'jen' and is also set to restart unless explicitly stopped.
+
+## Setup Instructions:
+1.Ensure Docker is installed on your machine.
+2.Clone this repository.
+3.Navigate to the project directory.
+Run docker-compose up to start the services:
+```bash
+docker compose up -d
+```
+
+## Usage:
+1.Access the web application by visiting http://localhost:5000 in your web browser.
+2.Access Jenkins' web interface by visiting http://localhost:88.
+3.Set up Jenkins jobs and pipelines as needed for continuous integration and deployment.
