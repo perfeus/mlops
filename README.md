@@ -77,15 +77,15 @@ Web Server: This service, named web-server, is designed to run a web application
 Continuous Integration: The continues-integration service is responsible for running Jenkins using the image [sndbox44/jenkinspy:latest](https://hub.docker.com/repository/docker/sndbox44/jenkinspy/general) from Docker Hub. It exposes ports 88 and 50000 on the host machine for accessing Jenkins' web interface and handling Jenkins agent communication, respectively. The container is named 'jen' and is also set to restart unless explicitly stopped.
 
 ## Setup Instructions:
-1.Ensure Docker is installed on your machine.
-2.Clone this repository.
-3.Navigate to the project directory.
+1. Ensure Docker is installed on your machine.
+2. Clone this repository.
+3. Navigate to the project directory.
 Run docker-compose up to start the services:
 ```bash
 docker compose up -d
 ```
 
 ## Usage:
-1.Access the web application by visiting http://localhost:5000 in your web browser.
-2.Access Jenkins' web interface by visiting http://localhost:88.
-3.Set up Jenkins jobs and pipelines as needed for continuous integration and deployment.
+1. Access the web application by visiting http://localhost:5000 in your web browser.
+2. Access Jenkins' web interface by visiting http://localhost:88.
+3. Set up Jenkins jobs and pipelines as needed for continuous integration and deployment.
