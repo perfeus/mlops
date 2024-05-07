@@ -89,3 +89,16 @@ docker compose up -d
 1. Access the web application by visiting http://localhost:5000 in your web browser.
 2. Access Jenkins' web interface by visiting http://localhost:88.
 3. Set up Jenkins jobs and pipelines as needed for continuous integration and deployment.
+
+# Mudule 4
+
+The project is aimed to demonstrate skills in using the DVC (data version control) utility. In the project Google Drive is used as dvc remote repository [link] (https://drive.google.com/drive/folders/1Vre7BSCadkYkooFwCZMxEAHccx1js0Ch?usp=drive_link) and data imported from catboost.datasets module.
+
+## Steps:
+1. Create a dataset with create_datasets.py.
+2. Modify the dataset with modify_datasets.py.
+3. Impute nan values in the 'Age' column with its mean.
+4. Apply one-hot-encoding to 'Sex' column.
+
+## Conclusion:
+Upon successful completion of the all steps, a Git repository with published metadata and a folder on Google Drive containing different versions of the datasets will be created.
