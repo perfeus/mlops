@@ -92,7 +92,11 @@ docker compose up -d
 
 # Mudule 4
 
-The project is aimed to demonstrate skills in using the DVC (data version control) utility. In the project Google Drive is used as dvc remote repository [link] (https://drive.google.com/drive/folders/1Vre7BSCadkYkooFwCZMxEAHccx1js0Ch?usp=drive_link) and data imported from catboost.datasets module.
+The project is aimed to demonstrate skills in using the DVC (data version control) utility. In the project Google Drive is used as dvc remote repository [link](https://drive.google.com/drive/folders/1Vre7BSCadkYkooFwCZMxEAHccx1js0Ch?usp=drive_link) and data imported from catboost.datasets module:
+```bash
+from catboost.datasets import titanic
+train, test = titanic()
+```
 
 ## Steps:
 1. Create a dataset with create_datasets.py.
