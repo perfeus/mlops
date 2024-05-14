@@ -1,4 +1,6 @@
 import pandas as pd # to work with tabular data
+import joblib # to save the model
+from sklearn.metrics import root_mean_squared_error as rmse # to evaluate the model
 df = pd.read_csv("insurance/insurance.csv") # to load the dataset
 
 
@@ -49,3 +51,23 @@ def test_check_duplicates():
     Test the check_duplicates function
     """
     assert check_duplicates(df) == 1
+
+# load the model from the file
+model = joblib.load('insurance/model.pkl')
+
+def metrics_model(df, noise, model):
+    """
+    Evaluate the model with the dataset and noise
+    """
+    df_noised = df.copy() # create a copy of the dataset
+    df_noised.iloc[700:1000, [0, 2, 3]] *= 3 # add noise to the dataset
+    X, y = df.drop('charges', axis=1), df['charges'] # separate features and target
+    X_noised, y_noised = df_noised.drop('charges', axis=1), df_noised['charges'] # separate features and target
+    return rmse(y, model.predict(X_noised)), rmse(y, model.predict(X))
+
+def test_metrics_model():
+    """
+    Test the metrics_model function
+    """
+    assert metrics_model(df, 2, model)[0] <= metrics_model(df, 2, model)[1] * 1.2
+
