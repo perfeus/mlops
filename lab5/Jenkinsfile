@@ -12,9 +12,19 @@ pipeline {
                 '''
             }
         }
+        stage('Copy Credentials') {
+            steps {
+                sh 'cp /var/jenkins_home/data/kaggle.json /var/jenkins_home/workspace/test/lab5/'
+            }
+        }
         stage('Create Dataset') {
             steps {
                 sh 'jupyter nbconvert --execute lab5/lab5.ipynb --to python'
+            }
+        }
+        stage('Test Dataset') {
+            steps {
+                sh 'pytest lab5/test_datasets.py'
             }
         }
     }
