@@ -1,7 +1,11 @@
+import os # to work with the file system
 import pandas as pd # to work with tabular data
 import joblib # to save the model
 from sklearn.metrics import root_mean_squared_error as rmse # to evaluate the model
-df = pd.read_csv("./insurance/insurance.csv") # to load the dataset
+
+current_directory = os.getcwd() # get the current directory 
+path = current_directory if current_directory.endswith("lab5") else current_directory + "/lab5" # check if the current directory ends with "tests"
+df = pd.read_csv(path + "/insurance/insurance.csv") # to load the dataset
 
 
 def check_missing_values(df):
@@ -53,7 +57,7 @@ def test_check_duplicates():
     assert check_duplicates(df) == 1
 
 # load the model from the file
-model = joblib.load('insurance/model.pkl')
+model = joblib.load(path + '/insurance/model.pkl')
 
 def metrics_model(df, noise, model):
     """
