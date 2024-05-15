@@ -1,0 +1,25 @@
+/* Requires the Docker Pipeline plugin */
+pipeline {
+    agent any
+    stages {
+        stage('Environment Info') {
+            steps {
+                sh '''
+                echo $PATH
+                pwd
+                which python3
+                '''
+            }
+        }
+        stage('Create Dataset') {
+            steps {
+                sh 'jupyter nbconvert --execute lab3/dataset.ipynb --to python'
+            }
+        }
+    }
+    post('Always run') {
+        always {
+            sh 'echo Pipeline has completed!'
+        }
+    }
+}
