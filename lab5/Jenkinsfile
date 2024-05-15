@@ -8,7 +8,7 @@ pipeline {
                 echo $PATH
                 pwd
                 which python3
-                cp /var/jenkins_home/data/kaggle.json /var/jenkins_home/workspace/lab5/
+                cp /var/jenkins_home/data/kaggle.json /var/jenkins_home/workspace/tes/lab5/
                 '''
             }
         }
