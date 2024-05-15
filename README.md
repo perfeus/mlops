@@ -109,12 +109,12 @@ Upon successful completion of the all steps, a Git repository with published met
 
 # Mudule 5
 
-The project is aimed to demonstrate the process of testing dataset with the help of Pytest library. In the project Google Drive is used as dvc remote repository [link](https://drive.google.com/drive/folders/1Vre7BSCadkYkooFwCZMxEAHccx1js0Ch?usp=drive_link) and data imported from Kaggle [link](https://www.kaggle.com/datasets/mirichoi0218/insurance). CI and testing processes are carried out with the help of docker image [link](https://hub.docker.com/repository/docker/sndbox44/jenkins/general) and to run container follow the next command s an example:
+The project is aimed to demonstrate the process of testing dataset with the help of Pytest library. In the project Google Drive is used as dvc remote repository [link](https://drive.google.com/drive/folders/1Vre7BSCadkYkooFwCZMxEAHccx1js0Ch?usp=drive_link) and data imported from Kaggle [link](https://www.kaggle.com/datasets/mirichoi0218/insurance). CI and testing processes are carried out with the help of docker image [link](https://hub.docker.com/repository/docker/sndbox44/jenkins/general) and to run container follow the next command as an example:
 
 ```bash
 docker run -d --rm --name jen -v jenkins:/var/jenkins_home/data -p 80:8080 -p 50000:50000
 ```
-Before the commnad above create volume 'jenkins' and place there kaggle.json file with your credentals to access the data on Kaggle
+Before the commnad above create volume 'jenkins' on a local machine and place there kaggle.json file with your credentals to access the data on Kaggle
 
 
 ## Pipeline Stages
