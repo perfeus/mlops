@@ -1,7 +1,7 @@
 import pandas as pd # to work with tabular data
 import joblib # to save the model
 from sklearn.metrics import root_mean_squared_error as rmse # to evaluate the model
-df = pd.read_csv("insurance/insurance.csv") # to load the dataset
+df = pd.read_csv("./insurance/insurance.csv") # to load the dataset
 
 
 def check_missing_values(df):

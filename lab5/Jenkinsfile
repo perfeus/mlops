@@ -24,7 +24,10 @@ pipeline {
         }
         stage('Test Dataset') {
             steps {
-                sh 'pytest lab5/test_datasets.py'
+                sh '''
+                pwd
+                pytest lab5/test_datasets.py
+                '''
             }
         }
     }
