@@ -112,7 +112,7 @@ Upon successful completion of the all steps, a Git repository with published met
 The project is aimed to demonstrate the process of testing dataset with the help of Pytest library. In the project Google Drive is used as dvc remote repository [link](https://drive.google.com/drive/folders/1Vre7BSCadkYkooFwCZMxEAHccx1js0Ch?usp=drive_link) and data imported from Kaggle [link](https://www.kaggle.com/datasets/mirichoi0218/insurance). CI and testing processes are carried out with the help of docker image [link](https://hub.docker.com/repository/docker/sndbox44/jenkins/general) and to run container follow the next command as an example:
 
 ```bash
-docker run -d --rm --name jen -v jenkins:/var/jenkins_home/data -p 80:8080 -p 50000:50000
+docker run -d --rm --name jen -v jenkins:/var/jenkins_home/data -p 80:8080 -p 50000:50000 jenkins:latest
 ```
 Before the commnad above create volume 'jenkins' on a local machine and place there kaggle.json file with your credentals to access the data on Kaggle
 
@@ -120,7 +120,7 @@ Before the commnad above create volume 'jenkins' on a local machine and place th
 ## Pipeline Stages
 The pipeline consists of the following stages:
 
-### 1.Environment Info
+### 1. Environment Info
 - Displays the current environment information.
 - Prints the system PATH.
 - Shows the current working directory.
@@ -129,14 +129,14 @@ The pipeline consists of the following stages:
 - Copy Credentials
 Ensures that the kaggle.json credentials file is copied to the workspace directory required for the dataset creation.
 
-### 2.Create Dataset
+### 2. Create Dataset
 - Executes the Jupyter Notebook (lab5.ipynb) to generate the dataset.
 - Converts the notebook to a Python script for execution.
 
-### 3.Test Dataset
+### 3. Test Dataset
 - Verifies the integrity and correctness of the dataset by running predefined tests using pytest.
 
-### 4.Post Actions
+### 4. Post Actions
 - Always Run
 - Executes a final step to notify that the pipeline has completed, regardless of the outcome of the previous stages.
 
